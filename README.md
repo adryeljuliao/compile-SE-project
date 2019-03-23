@@ -7,14 +7,10 @@ O principal objetivo desse projeto é alterar o valor de tempo dos arquivos vhd 
 * Executar o comando **npm install**, tanto no diretório ***frontend*** quanto no ***server***, para instalar todas as dependências dos dois projetos.
 
 ## Configuração do servidor
-* Abra o arquivo **script.js**, presente no diretório *rest-api* do ***server***, e informe o **CAMINHO ABSOLUTO** do projeto que deseja compilar. 
-* Informe também o nome do arquivo temporizador vhd (lpm_constant).  
+* Abra o arquivo **script.js**, presente no diretório *rest-api* do ***server***, e informe o **CAMINHO ABSOLUTO** do projeto que deseja compilar na variavel ***pathProject***. 
+* Informe também o nome do arquivo temporizador vhd (lpm_constant) na variavel ***nameFile***.  
 > OBSERVAÇÃO: é preciso indicar a extensão correta do arquivo ( Ex: **nomeDoArquivo.vhd** ).
 
 ## Uso
 * No diretório **frontend**, execute o comando **npm start**
 * No diretório **server**, execute o comando **node server.js**
-
-
-
-
