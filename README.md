@@ -8,7 +8,7 @@ o principal objetivo desse projeto é alterar o valor do tempo dos arquivos lpm_
 
 ## Uso
 * Para iniciar o *frontend*, execute o comando **npm start** dentro do diretório do front.
-* Para iniciar o server, execute o comando **node server.js**
+* Para iniciar o *server*, execute o comando **node server.js**
 
 
 
