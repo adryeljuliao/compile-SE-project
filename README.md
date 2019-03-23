@@ -4,7 +4,7 @@ O principal objetivo desse projeto é alterar o valor de tempo dos arquivos vhd 
 ## Instalação
 * Baixar e instalar o [nodejs](https://nodejs.org/en/download/) de acordo com seu sistema operacional.
 * Clonar o projeto.
-* Executar o comando **npm install**, tanto no diretório ***frontend*** quanto no ***server***, para instalar todas as dependências dos projetos.
+* Executar o comando **npm install**, tanto no diretório ***frontend*** quanto no ***server>rest-api***, para instalar todas as dependências dos projetos.
 
 ## Configuração do servidor
 * Abra o arquivo **script.js**, presente no diretório *rest-api* do ***server***, e informe o **CAMINHO ABSOLUTO** do projeto que deseja compilar na variavel ***pathProject***. 
