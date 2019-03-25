@@ -2,9 +2,10 @@ const sh = require('shelljs');
 const fs = require('fs');
 
 //----CONFIGURAÇÃO PARA O SCRIPT ENCONTRAR O ARQUIVO----
-const pathProject = '~/Documentos/projetos/embarcados/ladderblocks';
-const nameFile = 'lpm_constant0.vhd';
+const pathProject = '~/altera/myprojects/contador';
+const nameFile = 'tempo_constant.vhd';
 let newContent = '';
+const bar = '/';
 //----FIM CONFIGURAÇÃO----------------------------------
 
 
@@ -49,7 +50,7 @@ function changeContent(newValue) {
 function readContentFile() {
     sh.cd(pathProject);
     let pathFile = sh.pwd().stdout;
-    pathFile = `${pathFile}/${nameFile}`;
+    pathFile = `${pathFile}${bar}${nameFile}`;
     return fs.readFileSync(pathFile, 'utf-8');
 }
 
@@ -69,7 +70,9 @@ function overrideFile(overrideContent) {
 }
 
 exports.compileProject = () => {
-    sh.exec(`quartus_sh --flow compile ${pathProject}/temporizador.qpf --64bit`);
-    
+    const fileProject = `${pathProject}${bar}projectCont.qpf`;
+    const fileCompiled = `${pathProject}${bar}output_files${bar}projectCont.sof`;
+    //sh.exec(`quartus_sh --flow compile ${fileProject} --64bit`);
+    sh.exec(`quartus_pgm -c usb-blaster -m JTAG -o p;${fileCompiled}`)
     console.log('--------- COMANDO FINALIZADO -------------')
 }
